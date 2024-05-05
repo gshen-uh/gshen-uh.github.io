@@ -2,13 +2,50 @@
 layout: default
 ---
 
-<h1>{{ site.title }}</h1>
-<p>Welcome to the {{ site.title }}. </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <style>
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 8px;
+        }
+        .image-grid a {
+            width: 23%; /* Slightly less than 25% to allow for margin */
+            margin: 1%; /* Space between images */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s; /* Smooth transform on hover */
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        .image-grid a:hover {
+            transform: scale(1.05); /* Slightly enlarge images on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to UH Machine Learning Competition 2024</h1>
+    <p>Explore some of the highlights from the event below:</p>
 
-<div class="gallery">
-  {% for image in site.static_files %}
-    {% if image.path contains 'images/' %}
-      <img src="{{ site.baseurl }}{{ image.path }}" alt="Image description">
-    {% endif %}
-  {% endfor %}
-</div>
+    <div class="image-grid">
+        <a href="/assets/images/0.jpeg" target="_blank"><img src="/assets/images/0.jpeg" alt="Description of Image 0"></a>
+        <a href="/assets/images/1.jpeg" target="_blank"><img src="/assets/images/1.jpeg" alt="Description of Image 1"></a>
+        <a href="/assets/images/2.jpeg" target="_blank"><img src="/assets/images/2.jpeg" alt="Description of Image 2"></a>
+        <a href="/assets/images/3.jpeg" target="_blank"><img src="/assets/images/3.jpeg" alt="Description of Image 3"></a>
+        <a href="/assets/images/4.jpeg" target="_blank"><img src="/assets/images/4.jpeg" alt="Description of Image 4"></a>
+        <a href="/assets/images/5.jpeg" target="_blank"><img src="/assets/images/5.jpeg" alt="Description of Image 5"></a>
+        <a href="/assets/images/6.jpeg" target="_blank"><img src="/assets/images/6.jpeg" alt="Description of Image 6"></a>
+        <a href="/assets/images/7.jpeg" target="_blank"><img src="/assets/images/7.jpeg" alt="Description of Image 7"></a>
+        <a href="/assets/images/8.jpeg" target="_blank"><img src="/assets/images/8.jpeg" alt="Description of Image 8"></a>
+        <a href="/assets/images/9.jpeg" target="_blank"><img src="/assets/images/9.jpeg" alt="Description of Image 9"></a>
+    </div>
+</body>
+</html>
