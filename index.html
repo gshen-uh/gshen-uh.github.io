@@ -1,1 +1,14 @@
-Hello
+---
+layout: default
+---
+
+<h1>{{ site.title }}</h1>
+<p>Welcome to the {{ site.title }}. </p>
+
+<div class="gallery">
+  {% for image in site.static_files %}
+    {% if image.path contains 'images/' %}
+      <img src="{{ site.baseurl }}{{ image.path }}" alt="Image description">
+    {% endif %}
+  {% endfor %}
+</div>
