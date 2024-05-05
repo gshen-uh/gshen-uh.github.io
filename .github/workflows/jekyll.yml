@@ -62,3 +62,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'  # or whatever Ruby version you prefer
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+      - name: Build and test
+        run: bundle exec jekyll build
