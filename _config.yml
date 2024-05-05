@@ -1,14 +1,19 @@
-title: My Awesome Site
+# Site settings
+title: UH Machine Learning Competition 2024
 email: guoyang.shen@outlook.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is my awesome site where I blog about my adventures in learning Jekyll.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gshen-uh.github.io" # the base hostname & protocol for your site
-github_username:  gshen-uh
+description: >-
+  Showcasing cutting-edge machine learning applications at the University of Houston.
+baseurl: ""  # the subpath of your site, e.g., "/blog" if your site was hosted at example.com/blog
+url: "https://gshen-uh.github.io"  # the base hostname & protocol for your site
 
 # Build settings
-theme: minima
 markdown: kramdown
+theme: minima
 permalink: /:categories/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
+
+# Author
+author:
+  name: Guoyang Shen
+  email: guoyang.shen@out
